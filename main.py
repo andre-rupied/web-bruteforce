@@ -55,6 +55,11 @@ def start_threads(num_threads):
 
 
 if "__main__" == __name__:
-    num = int(input("number of threads: "))
+    while True:
+        num = int(input("number of threads: "))
+        if num > 0 and num < 100000:
+            break
+        else:
+            print("please enter a number (int) between 1 - 100 000")
     start_threads(num)
 input()
